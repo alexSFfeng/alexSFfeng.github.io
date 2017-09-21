@@ -1,0 +1,71 @@
+<!Doctype html>
+<html lang="en-US">
+
+<head>
+  <title>Project Request</title>
+  <meta charset="utf-8">
+  <meta name="author" content="Shanfeng Feng">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+  <link rel="stylesheet" href="projectRequest.css">
+
+
+  <script src="http://cdn.jsdelivr.net/jquery/1.11.1/jquery.min.js"></script>
+
+  <script defer="true" src=linkToGoogleSheet.js></script>
+
+
+
+</head>
+
+<body >
+  <div id="container">
+  <header><ins><b>Project Request</b></ins></header>
+
+  <!-- Request Interface --------------->
+  <aside id="FormAside">
+    <form id="request-form">
+      Requestor Name *: <input type="text" name="Name" id="Name" required>
+      <br><br>
+      <!--- idea and inconvenience entry text area ---->
+      <b><ins>Main Idea *</ins></b>
+      <br>
+      <textarea type="text" rows="4" cols="50" name="MainIdea" id="MainIdea" form="request-form" placeholder="Enter main idea here!" required></textarea>
+      <br><br>
+
+      <b><ins>Specification (optional)</ins></b>
+      <br>
+      <textarea type="text" rows="4" cols="50" name="Specification" id="Specification" form="request-form" placeholder="Enter specifications here!"></textarea>
+      <br><br>
+
+      <b><ins>Target Inconvenience *</ins></b>
+      <br>
+      <textarea type="text" rows="4" cols="50" name="Inconvenience" id="Inconvenience" form="request-form" placeholder="Enter your the target inconvenience you want to solve..." required></textarea>
+      <br><br>
+
+      <input type="reset" value="Clear" onclick="clearForm()">
+      <input type="submit" id="submit-form" value="Submit">
+      <br>
+   </form>
+ </aside>
+
+ <!-- Reequest Result Display ------------->
+ <section id="ResultSection">
+   <h2>Resulting Request<h2>
+   <img src="images/QuestionMark.png" id="ResultImage" alt="Question mark"
+   align="middle" width="200px" height = "200px">
+   <br>
+   <textarea rows="5" cols="50" id="resultIdea" wrap=on form="request-form"
+   readonly placeholder="Fill out the form and submit a project request!!"></textarea>
+ </section>
+
+ <!-- description --------------------------->
+  <footer>
+  <p><b> Enter your ideas here and tell us what inconveniences do you want to solve.
+     It would be considered to be put on to the project bounty wall. </b> </p>
+
+  </footer>
+ </div>
+</body>
+
+</html>

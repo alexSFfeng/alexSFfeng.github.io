@@ -1,0 +1,298 @@
+/* Major webpage component style */
+body {
+  color:white;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Webpage home banner */
+.banner {
+  background: url("images/bannerImg.jpg") no-repeat;
+  background-size: cover;
+  min-height: 650px;
+  text-align: center;
+}
+
+/* Webpage navigation appearances */
+.menu {
+  width:10%;
+  padding-top: 20px;
+  float: right;
+  margin: 0;
+  background: none;
+  outline: none;
+  position:relative;
+  display: inline-block;
+}
+
+/* Button that triggers drop down animation */
+.menuButton {
+  display: inline-block;
+  height:40px;
+  width:40px;
+  background: transparent;
+  background-image: url("images/menuIcon.png");
+  background-size: cover;
+  border-style: none;
+  outline:none;
+}
+
+.menuButton:hover, .menuButton:focus {
+  opacity: 0.7;
+}
+
+/* Drop down content for each navigation field */
+.dropdown-content {
+  display:none;
+  position: absolute;
+  background : transparent;
+  opacity: 0.5;
+  text-align: right;
+  width:240px;;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  right:20%;
+  overflow: auto;
+}
+
+.dropdown-content a {
+  color:white;
+  text-decoration: none;
+  display:block;
+  font-size: 20px;
+}
+
+.dropdown-content a:hover{
+  background-color: black;
+  color:white;
+  text-decoration: none;
+}
+
+.dropdown-content a:link, .dropdown-content a:visited{
+  color:white;
+
+}
+
+/* Only show drop down content when button is clicked */
+.show {
+  display:block;
+}
+
+.banner img {
+  display: block;
+  position:absolute;
+  border: 5px solid black;
+  height:45%;
+  width:22%;
+  max-height:360px;
+  max-width:220px;
+  top: 35%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+
+
+
+/* Website greeting headers */
+.greetingsDiv{
+  position:absolute;
+  width:100%;
+  top:60%;
+  left:50%;
+  transform: translate(-50%);
+}
+
+/*---- Welcome message decoration ---*/
+h1.greetings {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  text-align: center;
+  font-family: Snell Roundhand, cursive;
+  font-style: italic;
+  font-size:50px;
+  margin:0;
+}
+
+/*---- My name greeting -----*/
+h2.greetings {
+  font-family: Impact, fantasy;
+  font-style: italic;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  margin:0;
+}
+
+/* Lines that surround headings */
+h1.greetings::before, h1.greetings::after,
+h2.greetings::before, h2.greetings::after{
+  content: ' ';
+  position: absolute;
+  top: 51%;
+  overflow: hidden;
+  background-color: white;
+  height: 3px;
+  width: 10%;
+}
+
+/*--- Decorative lines to emphasize intro ----*/
+h1.greetings::after,
+h2.greetings::after{
+  margin-left: +1%;
+}
+
+h1.greetings::before,
+h2.greetings::before{
+  margin-left: -10%;
+  text-align: right;
+}
+
+/* section headers */
+h2.section {
+  color:rgb(204,203,218);
+  font-size:20px;
+}
+
+/* quote images */
+#quoteImg {
+  display:block;
+  margin: 0 auto;
+}
+
+/* project demo images */
+img.projectDemos {
+  width:100px;
+  height:100px;
+  border:0;
+  padding-left: 50px;
+  padding-right: 10px;
+}
+
+/* link specifications */
+a:link {
+  color:blue;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: purple;
+  background-color: transparent;
+  text-decoration:none;
+}
+
+a:hover{
+  color: red;
+  background-color: transparent;
+  text-decoration:underline;
+}
+
+/* Table style for project gallery---------------*/
+#gallery {
+  min-width: 1020px;
+  min-height: 312px;
+}
+
+td#projGal{
+  border: 1px solid black;
+  text-align:left;
+  padding:4px;
+  background-color: white;
+  color:black;
+  width: auto;
+}
+
+/* Table style for bounty wall------------------ */
+table {
+  padding: 20px;
+  margin:auto
+  border-collapse:collapse;
+  border-spacing: 5px;
+  width:100%;
+}
+
+th {
+  border: 1px solid white;
+  text-align:center;
+  font-size:200%;
+  padding:4px;
+  column-span: all;
+  background-color: transparent;
+  color:white;
+}
+
+td{
+  width:318px;
+  height:200px;
+  min-width: 318px;
+  min-height: 200px;
+}
+
+/* Flipping animation ------------------*/
+.flip-container {
+  perspective: : 1000px;
+}
+
+  /* flip when hovered */
+  .flip-container:hover .flipper, .flip-container.hover .flipper{
+    transform: rotateY(180deg);
+  }
+
+/* size of the content pane */
+.flip-container, .front, .back {
+  width:100%;
+  height:100%;
+}
+
+/* flip speed */
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position:relative;
+  height:100%;
+  width:100%
+}
+
+/* hide back of pane during swapping content pane */
+.front, .back {
+  backface-visibility: hidden;
+  position:absolute;
+  top: 0;
+  left: 0;
+  height:100%;
+  width:100%;
+  background-color: black;
+  display:flex;
+  align-items:center;
+  justify-content: center;
+}
+
+/* front pane, above back pane */
+.front {
+  z-index: 2;
+  transform: rotateY(0deg);
+
+}
+
+/* back pane, initially hidden */
+.back {
+  transform: rotateY(180deg);
+}
+
+/* project name title */
+.projectName {
+  font-size: 20px;
+  color:yellow;
+  text-shadow: 0.1em 0.1em 0.05em gray;
+}
+
+b.skills {
+  color:red;
+}
+
+.projectDescription b{
+  color:yellow;
+}

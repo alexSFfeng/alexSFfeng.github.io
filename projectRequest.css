@@ -1,0 +1,77 @@
+html,body{
+  height: 100%;
+}
+
+/*------Center background image for this page */
+body{
+  background-size: cover;
+  background-position: center center;
+  background-image: url("images/ideaMixerBackground.jpg");
+}
+
+/*----- Footer to describe the application ---- */
+footer {
+  background-color: black;
+  color:white;
+  padding:5px;
+
+}
+
+/*------ The container for the whole application --*/
+div#container{
+  width:752px;
+  border: 1px solid gray;
+  margin:auto;
+}
+
+/*------- Stores the entry form--------------*/
+aside#FormAside {
+  background-color: rgb(100,100,100);
+  color:white;
+  height:376px;
+  width:358px;
+  border: 1px solid black;
+  padding:8px;
+  float:left;
+}
+
+/*--------- Stores the panel for displaying result----*/
+section#ResultSection{
+  background-color: rgb(100,100,100);
+  border:1px solid black;
+  color:white;
+  overflow:hidden;
+  width:374px;
+  height:392px;
+  clear:none;
+}
+
+/*----------The main header for the web app ----*/
+header {
+  text-align: center;
+  border: 2px solid black;
+  background-color: white;
+  font-size:40px;
+  width: 748px;
+  height: 60px;
+  margin:auto;
+  clear:left;
+}
+
+/*---- each individual text area should have some space to avoid clustering-----*/
+textarea {
+  padding:5px;
+  resize: none;
+}
+
+/*---- heading for result panel */
+h2 {
+  text-align: center;
+}
+
+/* ---- image animation when mixing idea ----- */
+img {
+  border: 2px solid black;
+  margin-bottom: 10px;
+  background-color: white;
+}

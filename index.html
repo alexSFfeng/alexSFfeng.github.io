@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<!-- header information ----->
+<head>
+  <title>Shanfeng Feng's Personal Website</title>
+  <meta charset="utf-8">
+  <meta name="keywords" content="Shanfeng Feng, Alex Feng">
+  <meta name="description" content="Shanfeng's website">
+  <meta name="author" content="Shanfeng Feng">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- all the style goes here -->
+  <link rel="stylesheet" href="cssTutorial1.css">
+
+</head>
+
+<!-- body information -->
+<body background="images/webBackground.jpg">
+
+  <!-- website banner + navigations ---->
+  <div class="banner" id="mainHome">
+    <div class="menu">
+      <button class="menuButton" onclick="toggleMenu()"> </button>
+      <div id="dropdownSection" class="dropdown-content">
+        <a href="#Intro">About Me</a>
+        <a href="#Education-and-Experience">Education and Experience</a>
+        <a href="#gallery">Project Gallery</a>
+        <a href="#bountyTable">Project Bounty</a>
+        <a href="#resources">Learning Resources</a>
+      </div>
+    </div>
+
+    <img src="images/profile.png" alt="profile image" class="profile-pic">
+    <div class="greetingsDiv">
+      <h2 class="greetings"><strong>Hi, I'm Shanfeng Feng (Alex)</strong></h2>
+      <h1 class="greetings"><strong>Welcome to my website!</strong></h1>
+      <p id="contact" class="contact">Got any questions or feedbacks? Shoot me an email -
+        alex.sf.feng@gmail.com </p>
+    </div>
+  </div>
+  <hr>
+
+  <!-- ABOUT ME ----------------------------->
+  <h1>About me:</h1>
+  <p title="Introduction" id="Intro">
+      <h2 class="section"><ins>INTRODUCTION:</ins></h2>
+      Hi, I am Alex Feng, a student currently pursing a bachelor degree in
+      computer science. Like many other CS students, my current objective is to
+      obtain an internship that gives me the experience I need to become a
+      professional software engineer. However, it seems like internships are becoming
+      harder to get, especially for students will little or no work experience.
+      For this reason, I added to my website a list of "project bounty";
+      they will be some interesting project ideas that I thought of or requested by
+      the public. These side projects aim to solve some kind of inconvenience in
+      real life. Meanwhile, they can also be put onto resumes and help fellow CS
+      students showcase their abilities and passion.
+  </p>
+
+  <p>
+      I am interested in developing products that help solves everyday inconveniences.
+      One of the main reason I want to pursue a career in computer science is that
+      it provides infinite room for creativity and innovation. When it comes to bringing
+      an idea to real life, there are so many tools for developers to utilize. It would
+      be my career goal to be able to develop softwares that benefit everyone's life.
+  </p>
+
+  <p>
+      <a href="https://github.com/alexSFfeng" target="_blank"><b>My github page</b></a>
+      contains all the side projects I have done. Some of them are high school projects
+      and some of them are projects I have worked on in College. Come check them out!
+      Feel free to modify them anyway you want!
+  </p>
+
+  <br>
+
+  <p title="Education and Experience" id="Education-and-Experience">
+    <h2 class="section"><ins>Education</ins></h2>
+    I am currently an undergraduate pursing a computer science bachelor's degree at
+    UCSD (Class of 2020). My CS-experience has been great so far. Met different kinds of people that
+    work on class projects or side projects. I am able to learn valuable programming
+    concepts and techniques both in and out of class. <br><br>
+
+    So far, I've learned <b class="skills">data structures, Java, C, Unix shell scripting, and
+    version control</b> in school; I also finished a variety of class projects from
+    interactive games to re-implementing classic data structures like linked list
+    and hash table. <br><br>
+
+    <h2 class="section"><ins>Experience</ins></h2>
+    Summer 2017 I didn't get any internship offer from all the companies I've applied
+    to. Looking back, I think it is because of the lack of experience and proactivity
+    in improving myself. So I decided to find out what kind of projects I want to do
+    and start coding right away. Stickie+ (project gallery below) is my very first
+    personal project. I spent time that I could be playing games into understanding and
+    applying Java's swing api and learning how to save states via serialization. Dozens of
+    tabs open, they are either StackOverflow or Java API manual. It was time consuming but
+    definitely satisfying. After that project, I started to learn <b class="skills">HTML, CSS, and JavaScript</b>,
+    using resources at the bottom of the page. Instead of using shortcut utilities to build this website,
+    I decided to write all the files from scratch; the best way to learn is to use what is to be
+    learned. *I also learned SQL but lack the chance to put it to use. (maybe next project?)<br><br>
+
+    For 2017-2018 School year, I am a tutor for lower division Computer Science course.
+    Hopefully I help other students develop interest in this field. At the same time, I will also
+    be doing research under one of the CS professors. I look forward to diving into the researching
+    end of this field.
+  </p>
+  <!-- PROJECT SHOWCASE ----------------------->
+  <hr>
+  <table id="gallery">
+    <tr>
+      <th colspan="2">Project Gallery</th>
+    </tr>
+    <tr>
+      <td id="projGal"><b>Stickie+</b><a href="https://github.com/alexSFfeng/StickiePlus"
+        target = "_blank"><img class="projectDemos" src="images/StickieDemo.png"
+        alt="StickiedDemo.png" title="Click to visit github repo"></a>
+      </td>
+      <td id="projGal">
+        <b>A personal planner for increasing productivity and developing
+           a proactive habit.</b>
+        <ul style="list-style-type:square">Used for:
+          <li>Organizing daily tasks</li>
+          <li>Planning a future plan</li>
+          <li>Memo for note taking</li>
+          <li>Display to show tasks due on TODAY</li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+
+  <hr>
+  <!-- PROJECT BOUNTY!!!!!!!! --------->
+  <!-- Flipping animation learned from tutorial: https://davidwalsh.name/css-flip -->
+  <div id="bountyTable">
+    <noscript> Sorry, your browser does no support JavaScript! Cannot load bounty
+      wall.</noscript>
+    <table id=projectTable>
+      <tr>
+        <th colspan="3">Project Bounty</th>
+      </tr>
+
+      <tr>
+        <td>
+          <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+            <div class = "flipper">
+              <div class = "front" >
+                  <div class= "projectName">Webreg Arena Planner</div>
+              </div>
+              <div class = "back" >
+                  <p class= "projectDescription">
+                    <b>Main Idea:</b> UCSD webreg extension that collects current school year
+                    statistics and generate possible class schedules for target student.<br>
+                    <b>Specification:</b> Each generated schedules contain a calculated chance
+                    of student getting that schedule for his/her pick time. <br>
+                    <b>Target Inconvenience:</b> Help student pick classes in a wiser and more
+                    organized manner.
+                  </p>
+              </div>
+            </div>
+          </div>
+        </td>
+
+        <td>
+          <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+            <div class = "flipper">
+              <div class = "front" >
+                  <div class="projectName">The Interviewer</div>
+              </div>
+              <div class = "back" >
+                <p class= "projectDescription">
+                  <b>Main Idea:</b> Mobile application that allows user to match with other
+                  people for mock interview. There would be topics selection and scoring system<br>
+                  <b>Specification:</b> User could declare what major he/she is and what kind of
+                  topic he/she wants to get interview on. The system should have a default interviewer
+                  just in case there is no real person match<br>
+                  <b>Target Inconvenience:</b> Provide people a source for getting interview practice;
+                  thus increase their chances of getting a job or internship.
+                </p>
+              </div>
+            </div>
+          </div>
+        </td>
+
+        <td>
+          <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+            <div class = "flipper">
+              <div class = "front" >
+                  <div class="projectName">Note Reader</div>
+              </div>
+              <div class = "back" >
+                <p class= "projectDescription">
+                  <b>Main Idea:</b> Mobile app for note taking. Take a picture of the text
+                  that needs to be scanned and enter keywords for topic and subject.<br>
+                  <b>Specification:</b> App should generate a brief summary base on user input
+                  and will organize key points that user should take note of<br>
+                  <b>Target Inconvenience:</b> Allow people to quickly find the key points of
+                  a text. Good for both studying and reading long and cluster text files.
+                </p>
+              </div>
+            </div>
+          </div>
+        </td>
+
+      </tr>
+
+      <tr>
+        <td>
+          <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+            <div class = "flipper">
+              <div class = "front" >
+                  <div class="projectName">Trip Guidance</div>
+              </div>
+              <div class = "back" >
+                <p class= "projectDescription">
+                  <b>Main Idea:</b> Mobile/Desktop application for trip planning. Users specify the
+                  budget and place they want to go to. They will be match with users that are familiar
+                  with that place and had planned a trip there before.<br>
+                  <b>Specification:</b> App should contain translation functionality so that language
+                  barrier could be minimized. There should be an interface for timeline planning and cost
+                  calculation.<br>
+                  <b>Target Inconvenience:</b> Great way for cost efficient and time-saving traveling; it
+                  will also help people meet people from other countries.
+                </p>
+              </div>
+            </div>
+          </div>
+        </td>
+
+        <td>
+          <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+            <div class = "flipper">
+              <div class = "front" >
+                  <div class="projectName">Coming Soon!</div>
+              </div>
+              <div class = "back" >
+                 <p> submit a request! </p>
+              </div>
+            </div>
+          </div>
+        </td>
+
+        <td>
+          <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+            <div class = "flipper">
+              <div class = "front" >
+                  <div class="projectName">Coming Soon!</div>
+              </div>
+              <div class = "back" >
+                 <p> submit a request! </p>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+            <div class = "flipper">
+              <div class = "front" >
+                  <div class="projectName">Coming Soon!</div>
+              </div>
+              <div class = "back" >
+                 <p> submit a request! </p>
+              </div>
+            </div>
+          </div>
+        </td>
+
+        <td>
+          <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+            <div class = "flipper">
+              <div class = "front" >
+                  <h3 class="projectName">Coming Soon!</h3>
+              </div>
+              <div class = "back" >
+                 <p> submit a request! </p>
+              </div>
+            </div>
+          </div>
+        </td>
+
+        <td>
+          <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+            <div class = "flipper">
+              <div class = "front" >
+                  <div class="projectName">Coming Soon!</div>
+              </div>
+              <div class = "back" >
+                 <p> submit a request! </p>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+
+    </table>
+
+  <p> **This bounty wall contains project ideas that I want to work on.
+      The general public could also submit a <a href="projectRequestPage.htm"
+      target="_blank"> <b> project request</b></a>. I would try to develop it if
+      possible! </p>
+
+  <p>Since it's impossible for me to finish all the project request on my own,
+    developers are welcome to work on them as well. The color of the request
+    corresponds to the status of this project. <span style="color:blue">Blue</span>
+    means currently developing. <span style="color:yellow">Yellow</span> means no one
+    is currently working on it. <span style="color:red">Red</span> means project is
+    almost done!
+  </p>
+  </div>
+  <hr>
+  <!-- RESOURCES FOR LEARNING ----->
+  <h2 class="section" id="resources"> <ins> Resources For Learning CS (MOSTLY FREE)<ins> </h2>
+  <p>
+    <!-- LIST OF RESOURCES ------------------->
+    <ul>
+
+    <li><a href="https://www.codecademy.com/" target = "_blank"><b>Codecademy</b>
+    </a> would be a great start for learning some beginner friendly languages
+    and techniques. What is great about it is that it is totally free and highly
+    interactive.</li>
+
+    <li><a href="https://www.w3schools.com/" target = "_blank"><b>W3Schools</b>
+    </a> is very popular for learning web design. I would recommend learning
+    HTML, CSS, JavaScript, and server side knowledge there.</li>
+
+    <li><a href="https://www.sololearn.com/" target = "_blank"><b>SoloLearn</b>
+    </a> is for people who would like to learn on the go. They have many mobile
+    educational apps that teaches multiple programming language. The user interface
+    looks clean and it is one of the mobile learning resource I would choose
+    first for learning on the go.</li>
+
+    <li><a href="https://www.edx.org/" target = "_blank"><b>EDX</b></a>, <a href="https://ocw.mit.edu/index.htm" target = "_blank"><b>MIT Open
+    Courseware</b></a>, and <a href="https://lagunita.stanford.edu/"
+    target = "_blank"><b>Stanford Lagunita</b></a> is helpful in learning
+    important CS concepts and algorithmic thinking. They have online courses
+    that you can take for free and are mostly self-paced</li>
+
+    </ul>
+  </p>
+
+  <script src="menuNavigation.js"></script>
+</body>
+</html>
